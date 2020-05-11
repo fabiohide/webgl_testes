@@ -1,3 +1,10 @@
+function preload() {
+
+
+    corpo1 = loadModel('pvc.obj');
+
+}
+
 function setup() {
     createCanvas(windowWidth, windowHeight, WEBGL);
 }
@@ -9,13 +16,11 @@ function draw() {
 
     background(175);
 
-    rectMode(CENTER);
-    noStroke();
+    //rectMode(CORNER);
+    //noStroke();
     normalMaterial()
-    rotateY(frameCount * 0.05);
+    rotateY(frameCount * 0.15);
     rotateX(frameCount * 0.03);
-    torus(30, 15);
-
-    //angle += 2.07;
+    model(corpo1, 100, 100);
 
 }
